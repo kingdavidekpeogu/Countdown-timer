@@ -1,0 +1,141 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown timer</title>
+    <style> 
+        body {
+          background-color: #f5f5f5;
+          color: #333;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+        }
+        .container {
+          color: #323;
+          margin: 0 auto;
+          text-align: center;
+        }
+        h1 {
+          font-weight: normal;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: cursive;
+        }     
+        li {
+          display: inline-block;
+          font-size: 24px;
+          list-style-type: none;
+          padding: 16px;
+          text-transform: uppercase;
+        }       
+        li span {
+          display: block;
+          font-size: 72px;
+          border-radius: 25%;
+          color: white;
+          filter: drop-shadow(5px 5px 5px black);
+
+        }
+        img {
+         width: 600px;
+         height: 500px;
+         border-radius: 5%;
+         filter: drop-shadow(5px 5px 5px black);
+         display: flex;
+         filter: blur(0%);
+         justify-content: center;
+
+        }
+        .text {
+         display: flex;
+         justify-content: center;
+        }
+        .images {
+         display: flex;
+         justify-content: center;
+        }
+        h6 {
+         position: absolut;
+         justify-content: right;
+        }
+
+      </style>
+</head>  
+   <img class="images" src="/apple_watch_ultra_2_cellular_49mm_titanium_white_ocean_band_34fr_screen__usen_t-0_1.jpg" alt="centered image" class="center">
+<u><div class="text"><h1 style="color: blue">K.D GROUP APPLE WATCH ULTRA 2(SECOND GEN) GIVEAWAY</h1></div></u>
+<h2>The apple watch ultra giveaway ends on the 31st of March, 2024 at 12:00am</h2>
+<body>
+  <h4>We at K.d group are happy to announce that there will be a giveaway for 10 random people who have purchased an apple iphone 15 from us this year.
+    if you happen to be one of the lucky 10 winners you get to enjoy enjoy all these: 
+
+<h3>Rugged Design:</h3>
+The Apple Watch Ultra features a 49mm titanium case that strikes the perfect balance between weight, durability, and corrosion resistance.
+Its flat sapphire front crystal protects the Retina display, which is an impressive 2000 nits—that’s 2x brighter than any previous Apple Watch display1.
+<h3>Bold Features:</h3>
+<h4>Customizable Action Button:</h4> The high-contrast international orange Action button provides instant access to various features, including Workouts, Compass Waypoints, and more.
+<h4>Battery Life:</h4> With the best battery life of any Apple Watch, it can last up to 36 hours during normal use. Activate the new low-power setting for multi-day adventures, extending battery life to up to 60 hours1.
+<h4>Microphones:</h4> Apple Watch Ultra boasts three built-in microphones that significantly improve sound quality during voice calls. Advanced algorithms reduce ambient background noise, ensuring remarkable clarity even in challenging conditions.
+<h4>GPS and Compass:</h4> The watch includes dual-frequency L1 and L5 GPS, providing crazy-accurate location tracking. Plus, it has a built-in compass for navigation2.
+<h4>Emergency Features:</h4> From crash and fall detection to an emergency siren (SOS), the Apple Watch Ultra is designed to keep you safe and connected.
+<h4>Water Depth and Temperature Sensors:</h4> Ideal for aquatic adventures, it monitors water depth and temperature.
+<h4>Cellular Connectivity:</h4> Stay connected even in remote areas with built-in cellular capabilities3.
+<h3>New Bands:</h3>
+Trail Loop Band: Designed for endurance athletes and runners, it’s the thinnest Apple Watch band to date.
+Alpine Loop Band: Perfect for mountain explorations.
+Ocean Band: Ideal for water enthusiasts.
+
+Remember, the Apple Watch Ultra isn’t just a smartwatch—it’s your versatile companion for pushing boundaries and embracing adventure! 🌟🏞️🌊
+
+<hr><strong>ensure to return back after the countdown to see if you are one of the lucky winners.</strong>
+<em><p>Signed</p></em>
+<div>CEO K.D GROUP
+
+  </h4>
+    <div class="container">
+        <div id="countdown">
+          <ul>
+            <li><span style="background-color:darkblue" id="days"></span>Days</li>
+            <li><span style="background-color:darkblue" id="hours"></span>Hours</li>
+            <li><span style="background-color:darkblue" id="minutes"></span>Minutes</li>
+            <li><span style="background-color:darkblue" id="seconds"></span>Seconds</li>
+          </ul>
+       <script>(function () {
+        const second = 1000,
+              minute = second * 60,
+              hour = minute * 60,
+              day = hour * 24;
+            
+        let today = new Date(),
+            dd = String(today.getDate()).padStart(2, "0"),
+            mm = String(today.getMonth() + 1).padStart(2, "0"),
+            yyyy = today.getFullYear(),
+            nextYear = yyyy + 1,
+            dayMonth = "03/31/",
+            Giveawaydate = dayMonth + yyyy;
+        
+        today = mm + "/" + dd + "/" + yyyy;
+        if (today > Giveawaydate) {
+          Giveawaydate = dayMonth + nextYear;
+        }
+        const countDown = new Date(Giveawaydate).getTime(),
+            x = setInterval(function() {    
+      
+              const now = new Date().getTime(),
+                    distance = countDown - now;
+      
+              document.getElementById("days").innerText = Math.floor(distance / (day)),
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+              if (distance < 0) {
+                document.getElementById("headline").innerText = "!";
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                clearInterval(x);
+              }
+            }, 0)
+        }());</script>
+       
+</body>
+</html>
